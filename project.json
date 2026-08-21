@@ -1,0 +1,22 @@
+{
+  "name": "xx-bank-agent-command-center",
+  "type": "static-html-prototype",
+  "entry": "index.html",
+  "generatedAt": "2026-08-21T06:12:00.356Z",
+  "scenes": [
+    "assets/figma-scenes/figma-scene-01-default-pr-agent.png",
+    "assets/figma-scenes/figma-scene-02-switch-dlp-agent.png",
+    "assets/figma-scenes/figma-scene-03-tab-supplier-management.png",
+    "assets/figma-scenes/figma-scene-04-environment-toggle.png",
+    "assets/figma-scenes/figma-scene-05-send-summary-request.png",
+    "assets/figma-scenes/figma-scene-06-alert-detail-focus.png"
+  ],
+  "interactions": [
+    "agent-switch",
+    "tab-switch",
+    "environment-toggle",
+    "send-message",
+    "workflow-step-focus",
+    "alert-card-focus"
+  ]
+}
