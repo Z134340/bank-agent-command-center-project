@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自行查核 Agent 指揮中心</title>
+  <link rel="icon" href="./assets/brand/xx-bank-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="./assets/brand/xx-bank-logo.svg" alt="XX銀行">
+      </div>
+      <div class="hero">
+        <h1>自行查核 Agent 指揮中心</h1>
+        <p>以XX銀行風險場景為核心，讓 AI Agent 主動取證、比對、產出管理摘要與改善追蹤。</p>
+      </div>
+      <button id="environment" class="environment" type="button" aria-pressed="true">
+        <span class="dot"></span>
+        <span>展示環境｜唯讀查核</span>
+      </button>
+    </header>
+
+    <main>
+      <aside class="panel sidebar">
+        <h2 class="section-title">自查 Agent</h2>
+        <p class="section-copy">選擇一支 agent 啟動查核，系統會自動取證、判斷風險並保留軌跡。</p>
+        <div class="agents" id="agents"></div>
+      </aside>
+
+      <section class="panel chat">
+        <div>
+          <h2 class="section-title">主管對話視窗</h2>
+          <p class="section-copy">以對話觸發查核任務；AI 會用高管能理解的語言回報查核範圍、風險、原因與下一步。</p>
+        </div>
+        <nav class="tabs" id="tabs" aria-label="查核範圍"></nav>
+        <div class="dialogue" id="dialogue" aria-live="polite"></div>
+        <form class="composer" id="composer">
+          <input id="prompt" type="text" value="請產出給高管的三點摘要與改善建議。">
+          <button class="send" type="submit">送出</button>
+        </form>
+      </section>
+
+      <aside class="panel output">
+        <h2 class="section-title">AI 運行與產出</h2>
+        <p class="section-copy">可視化呈現 AI 如何拆解任務、蒐集佐證、比對控制要求，並輸出可追蹤結論。</p>
+        <div class="maturity-card">
+          <div class="score" id="score" style="--score: 76">76</div>
+          <div>
+            <h3 id="maturity-title">採購風險成熟度</h3>
+            <p id="maturity-copy">已具備基礎管控，但仍需強化高風險例外、供應商集中度與補核流程。</p>
+          </div>
+        </div>
+        <div class="steps" id="steps"></div>
+        <div class="alerts" id="alerts"></div>
+      </aside>
+    </main>
+
+    <div class="footer" aria-hidden="true"><div></div><div></div></div>
+    <div class="mock-label">AI 自行查核顧問示意｜Prototype Mockup</div>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+</html>
